@@ -13,7 +13,7 @@ export default function App() {
       <Switch style={{
         height: '100%'
       }}>
-        <Route component={Workshop} path='/:workshop' />
+        <Route component={Workshop} path='/' />
         <NotFound />
       </Switch>
     </div>

@@ -1,19 +1,11 @@
 import NotFound from 'components/NotFound';
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { Workshops } from './workshops';
 import marked from 'marked';
 
-Workshop.propTypes = {
-    match: PropTypes.object.isRequired
-};
-
-export default function Workshop({
-  match: {
-    params: { workshop }
-  }
-}) {
+export default function Workshop() {
     const [desc, setDesc] = useState('a');
+    const workshop = 'doomfist_buff';
     useEffect(() => {
       if (!Workshops.hasOwnProperty(workshop)) return;
       setDesc(Workshops[workshop].desc);
